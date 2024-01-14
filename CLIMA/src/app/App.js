@@ -38,7 +38,7 @@ class App extends Component {
 
     getCityName = async (lat, lon) => {
         console.log(`Getting city name from coordinates: (${lat}, ${lon})`);
-        const API_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${WEATHER_KEY}`;
+        const API_URL = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${WEATHER_KEY}`;
         try {
             const response = await fetch(API_URL);
             const data = await response.json();
